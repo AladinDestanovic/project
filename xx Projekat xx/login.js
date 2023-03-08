@@ -18,14 +18,6 @@ document.getElementById("submit").addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
-      if (data.userId) {
-        // uspesno
-        alert("Uspesna regisracija");
-        console.log("uspesnpo");
-        window.location.href = "pitanja.html";
-      } else {
-        // neuspesno
-        alert("Neuspesno");
-      }
+      window.location.href = "pitanja.html";
     });
 });
