@@ -91,3 +91,4 @@ document.getElementById("c").addEventListener("click", () => {
   submitAnswer(questionn.id, ans);
 });
 let total = 30;
+window.location.href = "succes.html?points=" + points;
