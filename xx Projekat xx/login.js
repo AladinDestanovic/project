@@ -14,10 +14,10 @@ document.getElementById("submit").addEventListener("click", function () {
       "Content-Type": "application/json",
     },
   })
-    .then(function (response) {
+    .then( (response)=> {
       return response.json();
     })
-    .then(function (data) {
+    .then( ()=> {
       window.location.href = "pitanja.html";
     });
 });
