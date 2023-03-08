@@ -42,12 +42,12 @@ const submitAnswer = (id, ans) => {
       points = points + questionn.poeni;
       console.log(points);
 
-      if (i <= 2) {
-        i = i + 1;
+      if (i <= arr.length-1) {
+        i++;
 
         questionn = arr[i];
       }
-      if (i > 2) {
+      if (i > arr.length-1) {
         setTimeout(() => {
           window.location.href = "results.html";
         }, 2000);
@@ -59,12 +59,12 @@ const submitAnswer = (id, ans) => {
     }
     ////
     else {
-      if (i <= 2) {
-        i = i + 1;
+      if (i <=  arr.length-1) {
+        i++;
 
         questionn = arr[i];
       }
-      if (i > 2) {
+      if (i >  arr.length-1) {
         setTimeout(() => {
           window.location.href = "results.html";
         }, 2000);
