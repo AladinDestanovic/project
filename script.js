@@ -5,7 +5,7 @@ const arr = [
     question: "ko je napisao Romeo i Julia",
     answers: ["sekspir", "tolstoj", "dostojevski"],
     corect: "sekspir",
-    poeni: 1,
+    poeni: 10,
   },
   {
     id: "2",
@@ -42,14 +42,14 @@ const submitAnswer = (id, ans) => {
       points = points + questionn.poeni;
       console.log(points);
 
-      if (i <= arr.length-1) {
-        i++;
+      if (i <= 2) {
+        i = i + 1;
 
         questionn = arr[i];
       }
-      if (i > arr.length-1) {
+      if (i > 2) {
         setTimeout(() => {
-          window.location.href = "results.html";
+          window.location.href = "results.html?points=" + points;
         }, 2000);
       }
       document.getElementById("pitanje").textContent = arr[i].question;
@@ -59,16 +59,18 @@ const submitAnswer = (id, ans) => {
     }
     ////
     else {
-      if (i <=  arr.length-1) {
-        i++;
+      points = points;
+      if (i <= 2) {
+        i = i + 1;
 
         questionn = arr[i];
       }
-      if (i >  arr.length-1) {
+      if (i > 2) {
         setTimeout(() => {
-          window.location.href = "results.html";
+          window.location.href = "results.html?points=" + points;
         }, 2000);
       }
+
       document.getElementById("pitanje").textContent = arr[i].question;
       document.getElementById("a").textContent = arr[i].answers[0];
       document.getElementById("b").textContent = arr[i].answers[1];
@@ -90,5 +92,3 @@ document.getElementById("c").addEventListener("click", () => {
   const ans = document.getElementById("c").textContent;
   submitAnswer(questionn.id, ans);
 });
-let total = 30;
-window.location.href = "result.html?points=" + points;

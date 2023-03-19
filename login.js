@@ -18,6 +18,6 @@ document.getElementById("submit").addEventListener("click", function () {
       return response.json();
     })
     .then(function () {
-      window.location.href = "pitanja.html";
+      window.location.href = "index.html";
     });
 });
